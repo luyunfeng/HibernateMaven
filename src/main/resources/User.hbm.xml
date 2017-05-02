@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="entity">
+    <!--在使用 idea 的时候  写上数据库的名字会报错原因是没有关联上数据库-->
+    <class name="User" table="tb_user">
+
+        <!-- 主键 ，映射-->
+        <id name="id" column="id">
+            <generator class="native"/>
+        </id>
+
+        <!-- 非主键，映射 -->
+        <property name="username" column="username"></property>
+        <property name="password" column="password"></property>
+
+    </class>
+
+</hibernate-mapping>
